@@ -1,0 +1,45 @@
+/* @font-face {
+  font-family: ShubhChintak;
+  src: url(~/fonts/PoetsenOne-Regular.ttf);
+} */
+/* @import url(//db.onlinewebfonts.com/c/e7f249e71a563eed9c495835657eb9c2?family=Poetsen+One); */
+#headshubhchintak{
+  font-family: "Poetsen One";
+  color: #db4e56
+}
+#tagshubhchintak{
+  font-family: "Poetsen One";
+  color: #069091
+}
+/* html{
+height: auto;
+width: auto;
+} */
+.heading {
+   height: inherit;
+   width: inherit;
+   justify-content:center;
+   align-items: center;
+   align-content: center;
+}
+.img-respsive {
+    height: auto;
+    width: 100%;
+    display: block;
+}
+.middle-line {
+    display: block;
+    margin: auto;
+}
+.navH{
+  justify-content: space-around;
+}
+.tthead {
+    /* font-weight: 800; */
+    background: -webkit-linear-gradient(360deg, #051dff, #b500ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.ff{
+  font-family: "Poetsen One"
+}
