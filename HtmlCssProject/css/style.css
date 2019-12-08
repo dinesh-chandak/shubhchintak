@@ -1,45 +1,81 @@
-/* @font-face {
-  font-family: ShubhChintak;
-  src: url(~/fonts/PoetsenOne-Regular.ttf);
-} */
-/* @import url(//db.onlinewebfonts.com/c/e7f249e71a563eed9c495835657eb9c2?family=Poetsen+One); */
-#headshubhchintak{
+@font-face {
   font-family: "Poetsen One";
-  color: #db4e56
+  src: url("//db.onlinewebfonts.com/t/e7f249e71a563eed9c495835657eb9c2.eot");
+  src: url("//db.onlinewebfonts.com/t/e7f249e71a563eed9c495835657eb9c2.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/e7f249e71a563eed9c495835657eb9c2.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/e7f249e71a563eed9c495835657eb9c2.woff") format("woff"), url("//db.onlinewebfonts.com/t/e7f249e71a563eed9c495835657eb9c2.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/e7f249e71a563eed9c495835657eb9c2.svg#Poetsen One") format("svg");
 }
-#tagshubhchintak{
+
+.pfont {
+  font-size: 1.2rem !important;
+}
+#headshubhchintak {
   font-family: "Poetsen One";
-  color: #069091
+  color: #db4e56;
 }
-/* html{
-height: auto;
-width: auto;
-} */
+#tagshubhchintak {
+  font-family: "Poetsen One";
+  color: #069091;
+}
+
 .heading {
-   height: inherit;
-   width: inherit;
-   justify-content:center;
-   align-items: center;
-   align-content: center;
+  height: 100vh;
+  width: inherit;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 .img-respsive {
-    height: auto;
-    width: 100%;
-    display: block;
+  height: auto;
+  width: 100%;
+  display: block;
 }
 .middle-line {
-    display: block;
-    margin: auto;
+  display: block;
+  margin: auto;
 }
-.navH{
+.navH {
   justify-content: space-around;
 }
 .tthead {
-    /* font-weight: 800; */
-    background: -webkit-linear-gradient(360deg, #051dff, #b500ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  /* font-weight: 800; */
+  background: -webkit-linear-gradient(360deg, #051dff, #b500ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.ff{
-  font-family: "Poetsen One"
+.ff {
+  font-family: "Poetsen One";
+}
+#wwda{
+  font-size: 1.8rem;
+}
+#SC{
+  font-size: 3.5rem;
+}
+.middle-line{
+  display: block;
+  margin:auto;
+}
+@media only screen and (max-width: 640px) {
+  .pfont {
+    font-size: 1rem !important;
+  }
+  #navBrand{
+    height: 30px;
+    width: auto;
+  }
+  .content{
+    padding: auto !important;
+    align-self: center;
+  }
+  #wwda{
+    font-size: 1rem;
+  }
+  #SC{
+    font-size: 1.8rem;
+  }
+  .heading{
+    height: 75vh;
+  }
+  #waw{
+    flex-direction: column;
+  }
 }

@@ -3,14 +3,41 @@
 
 <head>
   <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <script>
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
   <title>ShubhChintak & Co.</title>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
   <link rel="shortcut icon" href="../favicon.ico">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
   <nav class="navbar navbar-expand-lg navbar-light bg-light position-relative fixed-top ff">
     <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
       <ul class="navbar-nav ml-auto text-center">
@@ -24,7 +51,7 @@
     </div>
     <div class="mx-auto my-2 order-0 order-md-1   d-flex align-middle position-relative">
       <a class="" href="../index.html">
-        <img src="/img/ShubChintakBrand.png" height="50px" width="auto">&nbsp;&nbsp;
+        <img src="/img/ShubChintakBrand.png" height="50px" id="navBrand" width="auto">&nbsp;&nbsp;
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
         <span class="navbar-toggler-icon"></span>
@@ -75,88 +102,70 @@
         <h3 style="color:#069091">Mumbai</h3>
         <h3 style="color:#069091">Pune</h3>
       </div>
-      <div class="  col-xs-12 col-sm-12 col-md-6 col-lg-6 middle-line justify-content-center m-auto text-center align-content-center">
-        <div class="bootstrap-iso">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-6 col-sm-6 col-xs-12 justify-content-center m-auto text-center">
-                <form method="post">
-                  <div class="form-group ">
-                    <label class="control-label requiredField" for="name">
-                      Name
-                      <span class="asteriskField">
-                        *
-                      </span>
-                    </label>
-                    <input class="form-control p-2" id="name" placeholder="Name *" name="name" type="text" />
-                  </div>
-                  <div class="form-group ">
-                    <label class="control-label requiredField" for="number">
-                      Mobile Number
-                      <span class="asteriskField">
-                        *
-                      </span>
-                    </label>
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        +91
-                      </div>
-                      <input class="form-control" id="number" name="number" type="text" />
-                    </div>
-                  </div>
-                  <div class="form-group ">
-                    <label class="control-label requiredField" for="email">
-                      Email
-                      <span class="asteriskField">
-                        *
-                      </span>
-                    </label>
-                    <input class="form-control" id="email" name="email" type="text" />
-                  </div>
-                  <div class="form-group ">
-                    <label class="control-label requiredField" for="text">
-                      Organisation Name
-                      <span class="asteriskField">
-                        *
-                      </span>
-                    </label>
-                    <input class="form-control" id="text" name="text" type="text" />
-                  </div>
-                  <div class="form-group ">
-                    <label class="control-label requiredField" for="subject">
-                      Subject
-                      <span class="asteriskField">
-                        *
-                      </span>
-                    </label>
-                    <input class="form-control" id="subject" name="subject" type="text" />
-                  </div>
-                  <div class="form-group ">
-                    <label class="control-label requiredField" for="message">
-                      Message
-                      <span class="asteriskField">
-                        *
-                      </span>
-                    </label>
-                    <textarea class="form-control" cols="40" id="message" name="message" rows="4"></textarea>
-                  </div>
-
-                  <div class="form-group">
-                    <div>
-                      <button class="btn btn-primary btn-lg btn-block" name="submit" type="submit">
-                        Submit
-                      </button>
-                    </div>
-                  </div>
-                </form>
+      <div class="container col-sm-12 col-lg-6  text-center p-2">
+        <h2>Let's Talk</h2>
+        <form class="needs-validation " novalidate>
+          <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <label for="validationCustom01">First name</label>
+              <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value=""
+                required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="validationCustom02">Last name</label>
+              <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="" required>
+              <div class="valid-feedback">
+                Looks good!
               </div>
             </div>
           </div>
-        </div>
+          <div>
+            <div class="col-md-6">
+              <label for="validationCustomMobile">Mobile No.</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupPrepend">+91</span>
+                </div>
+                <input type="number" class="form-control" minlength=10 maxlength=10 id="validationCustomMobile"
+                  placeholder="Mobile No." aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  Please choose a mobile.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="validationCustom03">E-mail</label>
+            <input type="email" class="form-control" id="validationCustom03" placeholder="email" required>
+            <div class="invalid-feedback">
+              Please provide a valid city.
+            </div>
+          </div>
+          <div class="col-md-6 ">
+            <label for="validationCustom04">Organisation</label>
+            <input type="text" class="form-control" id="validationCustom04" placeholder="Organisation Name">
+          </div>
+          <div class="col-md-6 ">
+            <label for="validationCustom05">Subject</label>
+            <input type="text" class="form-control" id="validationCustom05" placeholder="Subject" required>
+            <div class="invalid-feedback">
+              Please provide a valid Subject.
+            </div>
+          </div>
+
+          <div class="col-md-4 p-3">
+            <button class="btn btn-primary btn-sm p-2" type="submit">Scale Up !</button>
+          </div>
+
+        </form>
       </div>
     </div>
   </div>
-
+  </div>
 </body>
 
 </html>
